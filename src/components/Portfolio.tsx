@@ -69,6 +69,7 @@ const Portfolio = () => {
       tech: ["Python", "Raspberry Pi", "Machine Learning", "YOLOv8", "CNN", "PyTorch", "TensorFlow", "PyQt"],
       publication: "https://ieeexplore.ieee.org/document/11147316",
       source: "https://github.com/adicooks/AlertNow/tree/main",
+      video: "https://www.youtube.com/watch?v=3eWp4HoJ_eY",
       image: "/images/Adi-dvsf-2025-pic.jpg",
       imageAlt: "Alert Now firearm and gunshot detection system"
     },
@@ -77,7 +78,7 @@ const Portfolio = () => {
       year: "Feb 2025 - Present",
       category: "Gun Violence Prevention",
       subtitle: "Penn Injury Science Center",
-      description: "Philadelphia faces acute challenges with firearm violence, disproportionately affecting youth of color in vulnerable communities, both as victims and as perpetrators.Through my PISC internship with the Penn Community Violence Prevention Program, I visit West Philadelphia communities, including local high schools, with PISC social workers to identify and connect with individuals at highest risk. Under the guidance of my mentor, I also analyze shooting incidents to uncover demographic, spatial, and temporal patterns, generating actionable insights for violence prevention strategies and timely public health interventions.",
+      description: "Philadelphia faces acute challenges with firearm violence, disproportionately affecting youth of color in vulnerable communities, both as victims and as perpetrators.Through my PISC internship with the Penn Community Violence Prevention Program, I visit West Philadelphia communities, including local high schools, with PISC social workers to identify and connect with individuals at highest risk. Under the guidance of my mentor, I also analyze shooting incidents to uncover demographic, spatial, and temporal patterns, generating actionable insights for violence prevention strategies and timely public health interventions. I've submitted abstract of this work to the 'The Society for Advancement of Violence and Injury Research' (SAVIR) 2026 conference and preparing the manuscript for publication in a peer reviewed journal.",
       tech: ["Statistical Data Analysis", "Cummunity Engagement", "Teamwork"],
       publication: "ToDo",
       source: "ToDo",
@@ -130,14 +131,22 @@ const Portfolio = () => {
       category: "Sneaker Reselling Platform",
       year: "2020-Present",
       subtitle: "Founder",
-      image: "/images/Adi-shoe-best.jpeg",
-      imageAlt: "AK Soles dashboard"
+      media: {
+        images: [
+          { src: "/images/Adi-shoe-best.jpeg", alt: "AK Soles dashboard" },
+          { src: "/images/Business.jpg", alt: "AK Soles business" }
+        ],
+        video: {
+          src: "/videos/adi-shoe.MOV",
+          type: "video/mp4"
+        }
+      }
     },
     {
       title: "LaunchX Enterpreneurship Bootcamp",
       description: "During my month at LaunchX, a residential entrepreneurship program at NC State, I led the development of InvestEd, a financial education app for teens. I built the app using Swift while learning business and entrepreneurship skills firsthand. The program wrapped up with our team pitching to investors in a Shark Tank-style format.",
       tech: ["React", "Firebase", "Tailwind CSS", "CodeMirror"],
-  
+
       category: "Summer Program",
       year: "2023",
       subtitle: "Financial Education App",
@@ -212,8 +221,8 @@ const Portfolio = () => {
               I'm excited to pursue interdisciplinary studies that deepen my technical expertise and expand my business perspective on the path from invention to innovation.
             </p>
             <div className="w-full flex justify-start mt-6">
-              {/* <a 
-                href="/gallery" 
+              {/* <a
+                href="/gallery"
                 className="px-4 py-2 rounded border border-[hsl(var(--border))] text-sm font-medium text-foreground hover:bg-[hsl(var(--accent))] transition-colors"
               >
                 View My Gallery
@@ -318,11 +327,11 @@ const Portfolio = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   {/* Second Column - Description and Tech */}
                   <div className="md:col-span-6 space-y-6">
                     <p className="text-base tracking-normal text-left">{project.description}</p>
-                    
+
                     {/* Tech stack */}
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech) => (
@@ -334,7 +343,7 @@ const Portfolio = () => {
                         </span>
                       ))}
                     </div>
-                    
+
                     {/* Buttons */}
                     <div className="flex flex-wrap gap-3 pt-2">
                       {project.publication && project.publication !== 'ToDo' && (
@@ -345,6 +354,17 @@ const Portfolio = () => {
                           className="px-4 py-2 rounded border border-[hsl(var(--border))] text-sm font-medium text-foreground hover:bg-[hsl(var(--accent))] transition-colors"
                         >
                           View Publication
+                        </a>
+                      )}
+                      {/* View Video box specifically for AlertNow (links to gallery by default) */}
+                      {project.title === 'AlertNow' && (
+                        <a
+                          href="https://www.youtube.com/watch?v=3eWp4HoJ_eY"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-4 py-2 rounded border border-[hsl(var(--border))] text-sm font-medium text-foreground hover:bg-[hsl(var(--accent))] transition-colors"
+                        >
+                          View Video
                         </a>
                       )}
                       {project.source && project.source !== 'ToDo' && (
@@ -359,15 +379,15 @@ const Portfolio = () => {
                       )}
                     </div>
                   </div>
-                  
+
                   {/* Third Column - Image */}
                   <div className="md:col-span-3">
                     <div className="sticky top-24">
                      {/* {project.image && (
                         <div className="overflow-hidden rounded-lg border border-border">
-                          <img 
-                            src={project.image} 
-                            alt={project.imageAlt || project.title} 
+                          <img
+                            src={project.image}
+                            alt={project.imageAlt || project.title}
                             className="w-full h-auto object-cover transition-transform hover:scale-105"
                             onError={(e) => {
                               e.currentTarget.src = '/placeholder.svg';
@@ -380,9 +400,9 @@ const Portfolio = () => {
   <div className="overflow-hidden rounded-lg border border-border">
     {project.imageLink ? (
       <a href={project.imageLink} target="_blank" rel="noopener noreferrer">
-        <img 
-          src={project.image} 
-          alt={project.imageAlt || project.title} 
+        <img
+          src={project.image}
+          alt={project.imageAlt || project.title}
           className="w-full h-auto object-cover transition-transform hover:scale-105"
           onError={(e) => {
             e.currentTarget.src = '/placeholder.svg';
@@ -391,9 +411,9 @@ const Portfolio = () => {
         />
       </a>
     ) : (
-      <img 
-        src={project.image} 
-        alt={project.imageAlt || project.title} 
+      <img
+        src={project.image}
+        alt={project.imageAlt || project.title}
         className="w-full h-auto object-cover"
         onError={(e) => {
           e.currentTarget.src = '/placeholder.svg';
@@ -406,7 +426,7 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Divider between items */}
                 {index < featuredProjects.length - 1 && (
                   <hr className="border-t border-[hsl(var(--border))] opacity-30 my-12" />
@@ -448,13 +468,13 @@ const Portfolio = () => {
                       )}
                     </div>
                   </div>
-                  
+
                   {/* Second Column - Description and Tech */}
                   <div className="md:col-span-6 space-y-6">
                     <p className="text-base tracking-normal text-left font-inter">
                       {project.description}
                     </p>
-                    
+
                     {/* Tech stack */}
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech) => (
@@ -466,7 +486,7 @@ const Portfolio = () => {
                         </span>
                       ))}
                     </div>
-                    
+
                     {/* Buttons */}
                     <div className="flex flex-wrap gap-3 pt-2">
                       {project.website && project.website !== '#' && (
@@ -519,15 +539,46 @@ const Portfolio = () => {
                       )}
                     </div>
                   </div>
-                  
-                  {/* Third Column - Image */}
+
+                  {/* Third Column - Media */}
                   <div className="md:col-span-3">
-                    <div className="sticky top-24">
-                      {project.image && (
+                    <div className="sticky top-24 space-y-4">
+                      {project.media ? (
+                        <>
+                          {/* Image Collage */}
+                          <div className="grid grid-cols-2 gap-2">
+                            {project.media.images.map((img, idx) => (
+                              <div key={idx} className="overflow-hidden rounded-lg border border-border">
+                                <img
+                                  src={img.src}
+                                  alt={img.alt}
+                                  className="w-full h-auto object-cover aspect-square"
+                                  onError={(e) => {
+                                    e.currentTarget.src = '/placeholder.svg';
+                                    e.currentTarget.alt = 'Project preview';
+                                  }}
+                                />
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* Video */}
+                          <div className="overflow-hidden rounded-lg border border-border">
+                            <video
+                              className="w-full h-auto"
+                              controls
+                              preload="metadata"
+                            >
+                              <source src={project.media.video.src} type={project.media.video.type} />
+                              Your browser does not support the video tag.
+                            </video>
+                          </div>
+                        </>
+                      ) : project.image ? (
                         <div className="overflow-hidden rounded-lg border border-border">
-                          <img 
-                            src={project.image} 
-                            alt={project.imageAlt || project.title} 
+                          <img
+                            src={project.image}
+                            alt={project.imageAlt || project.title}
                             className="w-full h-auto object-cover transition-transform hover:scale-105"
                             onError={(e) => {
                               e.currentTarget.src = '/placeholder.svg';
@@ -535,11 +586,11 @@ const Portfolio = () => {
                             }}
                           />
                         </div>
-                      )}
+                      ) : null}
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Divider between items */}
                 {index < additionalProjects.length - 1 && (
                   <hr className="border-t border-[hsl(var(--border))] opacity-30 my-12" />
@@ -579,7 +630,7 @@ const Portfolio = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   {/* Second Column - Description */}
                   <div className="md:col-span-6 space-y-6">
                     {/*<p className="text-base text-muted-foreground leading-relaxed">*/}
@@ -587,15 +638,15 @@ const Portfolio = () => {
                       {achievement.description}
                     </p>
                   </div>
-                  
+
                   {/* Third Column - Image */}
                   <div className="md:col-span-3">
                     <div className="sticky top-24">
                       {achievement.image && (
                         <div className="overflow-hidden rounded-lg border border-border">
-                          <img 
-                            src={achievement.image} 
-                            alt={achievement.imageAlt || achievement.title} 
+                          <img
+                            src={achievement.image}
+                            alt={achievement.imageAlt || achievement.title}
                             className="w-full h-auto object-cover transition-transform hover:scale-105"
                             onError={(e) => {
                               e.currentTarget.src = '/placeholder.svg';
@@ -607,7 +658,7 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Divider between items */}
                 {index < communityService.length - 1 && (
                   <hr className="border-t border-[hsl(var(--border))] opacity-30 my-12" />
