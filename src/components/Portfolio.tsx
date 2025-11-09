@@ -216,12 +216,20 @@ const Portfolio = () => {
             <p className="text-lg md:text-xl max-w-2xl leading-relaxed font-normal text-left">
               High school senior passionate about technology, research, and entrepreneurship. I love building solutions for real-world problems.
             </p>
-            <div className="w-full flex justify-start mt-6">
+            <div className="w-full flex justify-start gap-4 mt-6">
               <a
                 href="#about"
                 className="px-4 py-2 rounded border border-[hsl(var(--border))] text-sm font-medium text-foreground hover:bg-[hsl(var(--accent))] transition-colors"
               >
                 About Me
+              </a>
+              <a
+                href="https://adicooks.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded border border-[hsl(var(--border))] text-sm font-medium text-foreground hover:bg-[hsl(var(--accent))] transition-colors"
+              >
+                Adi through Wii Sports
               </a>
             </div>
           </div>
