@@ -246,24 +246,22 @@ const galleryData: GalleryData = {
   'Piano': {
     'crescendo-competition': {
       '2023': [
-       
+
         {
           id: 'crescendo-1',
           src: '/images/adi-piano.jpg',
           alt: 'Crescendo International Music Competition',
           caption: 'Performance at Crescendo International Music Competition',
         },
-        // Add more piano performance images here as needed
       ],
       '2024': [
-       
+
         {
           id: 'crescendo-2',
           src: '/images/Adi-crescendo.jpg',
           alt: 'Crescendo International Music Competition',
           caption: 'Performance at Crescendo International Music Competition',
         },
-        // Add more piano performance images here as needed
       ],
     },
   },

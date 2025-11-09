@@ -13,7 +13,7 @@ export default {
       },
     },
     fontFamily: {
-      sans: ['Satoshi', 'sans-serif'],
+      serif: ['"STIX Two Text"', 'serif'],
       inter: ['Inter', 'sans-serif'],
       mono: ['Space Mono', 'monospace'],
     },

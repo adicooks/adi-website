@@ -205,28 +205,24 @@ const Portfolio = () => {
       <section id="home" className="min-h-screen flex items-center section-padding">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 fade-in items-center ml-0">
           <div className="space-y-8 text-left">
-            <h1 className="text-8xl md:text-7xl font-bold tracking-tight leading-tight font-sans">
-              Hi! I'm Adi
+            <h1 className="text-8xl md:text-7xl font-bold tracking-tight leading-tight font-serif">
+              Hey! I'm Adi
             </h1>
             <div>
-              <span className="block text-lg md:text-xl font-medium mt-2 text-[#bee3f8] font-sans tracking-normal">
+              <span className="block text-lg md:text-xl font-medium mt-2 text-[#bee3f8] font-serif tracking-normal">
                 Researcher&nbsp;|&nbsp;Entrepreneur&nbsp;|&nbsp;Teacher
               </span>
             </div>
             <p className="text-lg md:text-xl max-w-2xl leading-relaxed font-normal text-left">
-              I’m a high school senior who believes in using technology to solve real problems. My research projects have focused on eldercare alert system and gun violence prevention solution. I also co-founded a peer-led program that teaches coding to kids.
-              <br/><br/>
-              Alongside my research and community work, I turned my love for sneakers into a six-figure business and published best practice as a roadmap for other entrepreneurs.
-              <br/><br/>
-              I'm excited to pursue interdisciplinary studies that deepen my technical expertise and expand my business perspective on the path from invention to innovation.
+              High school senior passionate about technology, research, and entrepreneurship. I love building solutions for real-world problems.
             </p>
             <div className="w-full flex justify-start mt-6">
-              {/* <a
-                href="/gallery"
+              <a
+                href="#about"
                 className="px-4 py-2 rounded border border-[hsl(var(--border))] text-sm font-medium text-foreground hover:bg-[hsl(var(--accent))] transition-colors"
               >
-                View My Gallery
-              </a> */}
+                About Me
+              </a>
             </div>
           </div>
           <div className="flex justify-center items-center">
@@ -249,21 +245,22 @@ const Portfolio = () => {
             </div>
             <div className="space-y-6 text-base md:text-lg leading-relaxed font-normal text-left text-white">
               <p>
-                Numbers have always fascinated me. Whether it’s breaking down basketball and football stats, analyzing stock movements, tracking sneaker drops, or working with data during internships, I love finding patterns that tell a story.
+                I enjoy learning and building things.
                 <br/><br/>
-                That curiosity sparked AK Soles, my sneaker reselling venture, which grew into a $450K business and a 3,000+ member Discord community. What began as a side hustle became a lesson in forecasting demand, leveraging data, and connecting with customers nationwide.
+                During Covid-19, I picked up sneaker reselling. What started with one pair expanded to thousands of pairs sold and partnerships formed with stores across the country.
+                I ended up starting a Discord community and YouTube channel to connect with other sneakerheads like myself, which grew to over 3,000 members.
               </p>
               <p>
-              My drive to create impact through technology has taken me in exciting directions. I developed AlertNow, a patent-pending ML-based gunshot detection system to enhance school safety. My work at the Penn Injury Science Center involved analyzing shooting data to improve public safety, while at the Perelman School of Medicine, I helped create an AI app for detecting neurodegenerative diseases.
+              Through my sneaker ventures, I discovered my love of technology. I first started building small scripts and monitors to help benefit my community. I soon thought beyond sneakers. I built a tool to help seniors with cognitive disabilties connect with their caregivers. Then, I built a patent pending machine-learning based gunshot system to enhance school safety. This work led me to the Penn Injury Science Center, where I have been interning at for nearly a year. I am using computer science and statistical tools to help find patterns in gun-violence to help violence ridden communities in the West Philadelphia area.
                <br/><br/>
                Sharing knowledge is another passion of mine. I've taught Python and AI/MLprogramming to over 120 younger students, hoping to spark in them the same excitement I felt when I first discovered coding.
               <br/><br/>
-              When I'm not working on projects, you'll find me playing chess, shooting hoops, kicking a soccer ball, or playing piano.
+              When I'm not working on projects, you'll find me playing chess, shooting hoops, and watching sports.
               </p>
             </div>
           </div>
           <div className="flex justify-right items-start">
-            <div className="w-full max-w-xl mt-0">
+            <div className="w-full max-w-xl mt-16">
               <img
                 src="/images/sneakercon.jpg"
                 alt="Sneakercon"
@@ -814,7 +811,7 @@ const Portfolio = () => {
 
       <footer className="py-8">
         <div className="w-full max-w-6xl mx-auto pr-8">
-          <p className="text-right text-xs text-muted-foreground font-sans font-medium">© 2025 Aditya Khurana. Built with care.</p>
+          <p className="text-right text-xs text-muted-foreground font-sans font-medium">© 2025 Aditya Khurana.</p>
         </div>
       </footer>
     </div>

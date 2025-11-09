@@ -31,15 +31,15 @@ export default function SiteNav() {
 
   return (
     <div className="w-full flex items-center justify-between">
-      <Link to="/" className="text-xl font-bold tracking-tight text-white hover:text-link-hover transition-colors">
-        Aditya Khurana
+      <Link to="/" className="text-xl ml-16 font-bold tracking-tight text-white hover:text-link-hover transition-colors">
+        Adi Khurana
       </Link>
       <div className="hidden md:flex items-center gap-8 text-base font-medium">
         {navLinks.map((link) => {
-          const isActive = 
+          const isActive =
             (link.href === '/' && location.pathname === '/') ||
             (link.href !== '/' && location.pathname.startsWith(link.href.replace('/#', '/')));
-          
+
           if (link.href.startsWith('/#')) {
             return (
               <a
@@ -47,8 +47,8 @@ export default function SiteNav() {
                 href={link.href}
                 onClick={(e) => handleAnchorClick(e, link.href)}
                 className={`transition-colors ${
-                  isActive 
-                    ? 'text-link-hover font-semibold' 
+                  isActive
+                    ? 'text-link-hover font-semibold'
                     : 'text-foreground/80 hover:text-link-hover'
                 }`}
               >
@@ -61,8 +61,8 @@ export default function SiteNav() {
               key={link.label}
               to={link.href}
               className={`transition-colors ${
-                isActive 
-                  ? 'text-link-hover font-semibold' 
+                isActive
+                  ? 'text-link-hover font-semibold'
                   : 'text-foreground/80 hover:text-link-hover'
               }`}
             >
