@@ -64,7 +64,7 @@ const Portfolio = () => {
       title: "AlertNow",
       year: "2024 - Present",
       category: "Gun Threat Detection",
-      subtitle: "Patent Pending, IEEE Conference Publication, 1st Place NJ Academy of Science",
+      subtitle: "Patent Pending & IEEE Conference Publication",
       description: (<>I developed a low-cost, real-time gunshot and firearm detection system leveraging multi-modal deep learning models (CNN, YOLOv8) that notifies authorities in real-time to enhance school safety; currently evaluating its commercial viability. This award-winning research was presented at 2025 IEEE Integrated STEM Education Conference held at Princeton University. The AlertNow research paper is published in IEEE <i>Xplore</i>.</>),
       tech: ["Python", "Raspberry Pi", "Machine Learning", "YOLOv8", "CNN", "PyTorch", "TensorFlow", "PyQt"],
       publication: "https://ieeexplore.ieee.org/document/11147316",
@@ -89,8 +89,8 @@ const Portfolio = () => {
     {
       title: "Software Developer Intern ",
       year: "Aug 2024 - July 2025",
-      category: "Gun Violence Prevention",
-      subtitle: "Perelman School of Medicine",
+      category: "Neuroimaging Research",
+      subtitle: "University of Pennsylvania Perelman School of Medicine",
       description: "During my internship, I collaborated with researchers at the Center for Biomedical Image Computing and Analytics (CBICA), which develops advanced computational methods to transform biomedical images into diagnostic and predictive tools for personalized medicine. I focused on designing and developing an AI-powered mobile app for NiChart, a large and diverse collection of MRI images, to enable early detection of aging and neurodegenerative diseases through imaging biomarkers. The app is now in beta testing for clinical integration.",
       tech: ["Swift", "Python", "AWS", "Xcode", "Problem Solving"],
       publication: "ToDo",
@@ -229,7 +229,7 @@ const Portfolio = () => {
             <img
               src="/images/A-A-fav.jpg"
               alt="Aditya Khurana standing confidently with a slight smile, wearing a casual outfit. The background is softly blurred, focusing on Aditya."
-              className="object-contain w-full h-auto max-w-[280px] md:max-w-[350px] lg:max-w-[400px]"
+              className="object-contain w-full h-auto max-w-[280px] md:max-w-[350px] lg:max-w-[400px] opacity-90 mix-blend-luminosity hover:opacity-100 hover:mix-blend-normal transition-all duration-300"
             />
           </div>
         </div>
