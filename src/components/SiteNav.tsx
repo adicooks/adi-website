@@ -30,8 +30,8 @@ export default function SiteNav() {
   };
 
   return (
-    <div className="w-full flex items-center justify-between">
-      <Link to="/" className="text-xl ml-16 font-bold tracking-tight text-white hover:text-link-hover transition-colors">
+    <div className="w-full max-w-[2000px] mx-auto flex items-center justify-between">
+      <Link to="/" className="text-xl font-bold tracking-tight text-white hover:text-link-hover transition-colors">
         Adi Khurana
       </Link>
       <div className="hidden md:flex items-center gap-8 text-base font-medium">

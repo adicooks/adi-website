@@ -15,45 +15,42 @@ type Category = {
   }[];
 };
 
-// Generate categories from galleryData
 const generateCategories = (): Category[] => {
   const categories: Category[] = [];
-  
+
   for (const [categoryId, categoryData] of Object.entries(galleryData)) {
     const subcategories = [];
-    
+
     for (const [subcategoryId, subcategoryData] of Object.entries(categoryData)) {
       if (Array.isArray(subcategoryData)) {
-        // Handle flat structure (array of images)
         subcategories.push({
           id: subcategoryId,
-          name: subcategoryId.split('-').map(word => 
+          name: subcategoryId.split('-').map(word =>
             word.charAt(0).toUpperCase() + word.slice(1)
           ).join(' '),
-          years: [] // No years for flat structure
+          years: []
         });
       } else {
-        // Handle nested structure (year-based)
         const years = Object.keys(subcategoryData);
         subcategories.push({
           id: subcategoryId,
-          name: subcategoryId.split('-').map(word => 
+          name: subcategoryId.split('-').map(word =>
             word.charAt(0).toUpperCase() + word.slice(1)
           ).join(' '),
           years
         });
       }
     }
-    
+
     categories.push({
       id: categoryId,
-      name: categoryId.split('-').map(word => 
+      name: categoryId.split('-').map(word =>
         word.charAt(0).toUpperCase() + word.slice(1)
       ).join(' '),
       subcategories
     });
   }
-  
+
   return categories;
 };
 
@@ -86,7 +83,6 @@ const getAllImages = (): GalleryImage[] => {
           });
         });
       } else {
-        // Handle nested structure (year-based)
         for (const [year, images] of Object.entries(subcategoryData)) {
           (images as any[]).forEach(image => {
             allImages.push({
@@ -100,7 +96,7 @@ const getAllImages = (): GalleryImage[] => {
       }
     }
   }
-  
+
   return allImages;
 };
 
@@ -119,28 +115,28 @@ function Gallery() {
     thumbnail?: string;
   } | null>(null);
   const navigate = useNavigate();
-  
+
   // Get the current category object
-  const currentCategory = selectedCategory 
-    ? categories.find(cat => cat.id === selectedCategory) 
+  const currentCategory = selectedCategory
+    ? categories.find(cat => cat.id === selectedCategory)
     : null;
 
   // Update filtered images when filters change
   useEffect(() => {
     let images = getAllImages();
-    
+
     if (selectedCategory) {
       images = images.filter(img => img.category === selectedCategory);
-      
+
       if (selectedSubcategory) {
         images = images.filter(img => img.subcategory === selectedSubcategory);
-        
+
         if (selectedYear) {
           images = images.filter(img => img.year === selectedYear);
         }
       }
     }
-    
+
     setFilteredImages(images);
   }, [selectedCategory, selectedSubcategory, selectedYear]);
 
@@ -168,7 +164,6 @@ function Gallery() {
   return (
     <div className="min-h-screen bg-background font-inter text-white antialiased">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header and filters */}
         <div className="space-y-2 mb-12">
           <h3 className="text-xs uppercase tracking-widest text-muted-foreground font-medium font-sans">GALLERY</h3>
           <h2 className="text-3xl md:text-4xl font-bold font-sans">Memories & Moments</h2>
@@ -259,7 +254,7 @@ function Gallery() {
                 <div className="w-full h-full flex items-center justify-center overflow-hidden relative">
                   {image.isVideo ? (
                     <>
-                      <video 
+                      <video
                         className="w-full h-full object-cover"
                         src={image.src}
                         preload="metadata"
@@ -267,9 +262,9 @@ function Gallery() {
                       />
                       <div className="absolute inset-0 flex items-center justify-center bg-black/20">
                         <div className="w-16 h-16 rounded-full bg-white/80 flex items-center justify-center">
-                          <svg 
-                            className="w-8 h-8 text-black" 
-                            fill="currentColor" 
+                          <svg
+                            className="w-8 h-8 text-black"
+                            fill="currentColor"
                             viewBox="0 0 24 24"
                           >
                             <path d="M8 5v14l11-7z" />

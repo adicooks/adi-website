@@ -33,7 +33,6 @@ export function GalleryView() {
 
   const [selectedImage, setSelectedImage] = useState<Image | null>(null);
 
-  // Get the current category and subcategory data
   const { images, hasYearlyData, availableYears } = useMemo(() => {
     if (!category || !subcategory) {
       return { images: [], hasYearlyData: false, availableYears: [] };
@@ -46,7 +45,6 @@ export function GalleryView() {
       return { images: [], hasYearlyData: false, availableYears: [] };
     }
 
-    // Handle both direct image arrays and year-based image collections
     let images: Image[] = [];
     let hasYearlyData = false;
     let availableYears: string[] = [];
@@ -113,7 +111,7 @@ export function GalleryView() {
         <h1 className="text-2xl font-bold">
           {category} / {subcategory} {year ? `/ ${year}` : ''}
         </h1>
-        
+
         {hasYearlyData && (
           <div className="flex items-center gap-2 ml-auto">
             <span className="text-sm text-muted-foreground">Year:</span>
@@ -163,14 +161,13 @@ export function GalleryView() {
         </div>
       )}
 
-      {/* Image Modal */}
       {selectedImage && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4"
           onClick={() => setSelectedImage(null)}
         >
-          <div 
-            className="relative max-w-5xl w-full max-h-[90vh]" 
+          <div
+            className="relative max-w-5xl w-full max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
           >
             <Button

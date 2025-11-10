@@ -8,7 +8,6 @@ export default function GalleryPage() {
 
   return (
     <div className="min-h-screen bg-background font-serif text-white antialiased">
-      {/* Top Navigation Bar */}
       <nav className="w-full px-8 md:px-16 py-5 bg-background z-50 sticky top-0 text-white border-b border-border">
         <SiteNav />
       </nav>

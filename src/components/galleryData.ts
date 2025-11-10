@@ -21,7 +21,6 @@ type GalleryData = {
 
 const galleryData: GalleryData = {
 
-  // STEM Competitions
   'Research': {
     'SeniorConnect': {
       '2023': [

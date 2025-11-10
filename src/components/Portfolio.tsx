@@ -16,7 +16,6 @@ type CommunityServiceItem = {
 };
 
 const Portfolio = () => {
-  // Scroll to anchor on hash change (works for navigation from any page)
   useEffect(() => {
     if (window.location.hash) {
       const el = document.getElementById(window.location.hash.replace('#', ''));
@@ -196,12 +195,12 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-background font-inter text-white antialiased">
-      {/* Top Navigation Bar */}
-      <nav className="w-full px-8 md:px-16 py-5 bg-background z-50 sticky top-0 text-white border-b border-border">
-        <SiteNav />
+      <nav className="w-full py-5 bg-background z-50 sticky top-0 text-white border-b border-border">
+        <div className="section-padding">
+          <SiteNav />
+        </div>
       </nav>
 
-      {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center section-padding">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 fade-in items-center ml-0">
           <div className="space-y-8 text-left">
@@ -229,7 +228,7 @@ const Portfolio = () => {
                 rel="noopener noreferrer"
                 className="px-4 py-2 rounded border border-[hsl(var(--border))] text-sm font-medium text-foreground hover:bg-[hsl(var(--accent))] transition-colors"
               >
-                Adi through Wii Sports
+                Wii Sports: Adi Edition
               </a>
             </div>
           </div>
@@ -243,7 +242,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about" className="py-16 section-padding">
         <div className="w-full max-w-full px-4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 fade-in items-center">
           <div className="space-y-8 text-left">
@@ -303,7 +301,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Featured Projects */}
       <section id="research" className="py-16 section-padding">
         <div className="w-full max-w-full px-4 mx-auto fade-in">
           <div className="space-y-2 mb-12">
@@ -313,7 +310,6 @@ const Portfolio = () => {
             {featuredProjects.map((project, index) => (
               <div key={index} className="w-full">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-                  {/* First Column - Title and Metadata */}
                   <div className="md:col-span-3">
                     <div className="sticky top-24 space-y-2">
                       <div className="space-y-2">
@@ -361,7 +357,6 @@ const Portfolio = () => {
                           View Publication
                         </a>
                       )}
-                      {/* View Video box specifically for AlertNow (links to gallery by default) */}
                       {project.title === 'AlertNow' && (
                         <a
                           href="https://www.youtube.com/watch?v=3eWp4HoJ_eY"
@@ -456,7 +451,7 @@ const Portfolio = () => {
                   <div className="md:col-span-3">
                     <div className="sticky top-24 space-y-2">
                       <div className="space-y-2">
-                        <span className="text text-muted-foreground font block">
+                        <span className="text text-muted-foreground font-medium block font-sans text-sm">
                           {project.category || 'Project'}
                         </span>
                         <h3 className="text-2xl font-bold text-foreground leading-tight tracking-tight font-sans">
@@ -476,7 +471,7 @@ const Portfolio = () => {
 
                   {/* Second Column - Description and Tech */}
                   <div className="md:col-span-6 space-y-6">
-                    <p className="text-base tracking-normal text-left font-inter">
+                    <p className="text-base tracking-normal text-left font-sans">
                       {project.description}
                     </p>
 
@@ -638,8 +633,7 @@ const Portfolio = () => {
 
                   {/* Second Column - Description */}
                   <div className="md:col-span-6 space-y-6">
-                    {/*<p className="text-base text-muted-foreground leading-relaxed">*/}
-                    <p className="text-base tracking-normal text-left font-inter">
+                    <p className="text-base tracking-normal text-left font-sans">
                       {achievement.description}
                     </p>
                   </div>
