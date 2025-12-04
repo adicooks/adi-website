@@ -82,7 +82,7 @@ const Portfolio = () => {
       publication: "ToDo",
       source: "ToDo",
       image: "/images/PISC.webp",
-      imageLink: "https://www.penninjuryscience.org/", // Makes this image clickable
+      imageLink: "https://www.penninjuryscience.org/",
       imageAlt: "Penn Injury Science Center"
     },
     {
@@ -95,7 +95,7 @@ const Portfolio = () => {
       publication: "ToDo",
       source: "ToDo",
       image: "/images/Perelman_School_of_Medicine.webp",
-      imageLink: "https://www.med.upenn.edu/", // Makes this image clickable
+      imageLink: "https://www.med.upenn.edu/",
       imageAlt: "Perelman School of Medicine"
     },
     {
@@ -261,7 +261,7 @@ const Portfolio = () => {
                <br/><br/>
                Sharing knowledge is another passion of mine. I've taught Python and AI/MLprogramming to over 120 younger students, hoping to spark in them the same excitement I felt when I first discovered coding.
               <br/><br/>
-              When I'm not working on projects, you'll find me playing chess, shooting hoops, and watching sports.
+              When I'm not working on projects, you'll find me playing chess & piano, shooting hoops, and watching sports.
               </p>
             </div>
           </div>
@@ -273,11 +273,18 @@ const Portfolio = () => {
                 className="object-cover w-full h-72 rounded mb-4"
                 style={{ aspectRatio: '2/1' }}
               />
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 gap-3">
                 <div className="relative w-full h-56 overflow-hidden rounded-lg bg-black group">
                   <img
                     src="/images/Adi-senior-connect-poster.jpg"
                     alt="Adi at a senior connect event, presenting and engaging with the audience"
+                    className="absolute inset-0 w-full h-full object-contain p-2 transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                </div>
+                <div className="relative w-full h-56 overflow-hidden rounded-lg bg-black group">
+                  <img
+                    src="/images/codingcamp.jpg"
+                    alt="Adi teaching a group of young students at a coding camp, smiling and engaged, with laptops and a classroom setting creating a collaborative and enthusiastic atmosphere"
                     className="absolute inset-0 w-full h-full object-contain p-2 transition-transform duration-500 ease-in-out group-hover:scale-110"
                   />
                 </div>
@@ -288,11 +295,11 @@ const Portfolio = () => {
                     className="absolute inset-0 w-full h-full object-contain p-2"
                   />
                 </div>
-                <div className="relative w-full h-56 overflow-hidden rounded-lg bg-black group">
+                <div className="relative w-full h-56 overflow-hidden rounded-lg bg-black">
                   <img
-                    src="/images/codingcamp.jpg"
-                    alt="Adi teaching a group of young students at a coding camp, smiling and engaged, with laptops and a classroom setting creating a collaborative and enthusiastic atmosphere"
-                    className="absolute inset-0 w-full h-full object-contain p-2 transition-transform duration-500 ease-in-out group-hover:scale-110"
+                    src="/images/chess.jpeg"
+                    alt="Adi playing chess."
+                    className="absolute inset-0 w-full h-full object-contain p-2"
                   />
                 </div>
               </div>
@@ -726,10 +733,10 @@ const Portfolio = () => {
             </div>
             {/* 7 */}
             <div className="grid gap-2 p-6 border border-border rounded-xl bg-card h-full">
-              <h3 className="text-lg font-bold font-sans">1st Place, Annual High School Programming Contest</h3>
+              <h3 className="text-lg font-bold font-sans">1st Place, Annual High School Team Programming Contest</h3>
               <p className="text-xs text-muted-foreground">Widener University</p>
-              <p className="text-xs text-muted-foreground">2024</p>
-              <p className="text-muted-foreground text-base">1st Place among 50 teams.</p>
+              <p className="text-xs text-muted-foreground">2024, 2025</p>
+              <p className="text-muted-foreground text-base">1st Place among ~50 teams. <br /> Fastest finish in program history.</p>
               <p className="text-xs text-muted-foreground italic">Programming competition</p>
             </div>
             {/* 8 */}
