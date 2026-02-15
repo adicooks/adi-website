@@ -262,6 +262,15 @@ const galleryData: GalleryData = {
           caption: 'Performance at Crescendo International Music Competition',
         },
       ],
+      '2025': [
+
+        {
+          id: 'crescendo-3',
+          src: '/images/Soccer.png',
+          alt: 'South Jersey Soccer Sectional Championship',
+          caption: 'South Jersey Soccer Sectional Championship',
+        },
+      ]
     },
   },
 };

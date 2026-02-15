@@ -64,7 +64,7 @@ const Portfolio = () => {
       year: "2024 - Present",
       category: "Gun Threat Detection",
       subtitle: "Patent Pending & IEEE Conference Publication",
-      description: (<>I developed a low-cost, real-time gunshot and firearm detection system leveraging multi-modal deep learning models (CNN, YOLOv8) that notifies authorities in real-time to enhance school safety; currently evaluating its commercial viability. This award-winning research was presented at 2025 IEEE Integrated STEM Education Conference held at Princeton University. The AlertNow research paper is published in IEEE <i>Xplore</i>.</>),
+      description: (<>I developed a low-cost, real-time gunshot and firearm detection system leveraging multi-modal deep learning models (CNN, YOLOv8) that notifies authorities in real-time to enhance school safety; currently evaluating its commercial viability. This award-winning research was presented at 2025 IEEE Integrated STEM Education Conference held at Princeton University. The AlertNow research paper is published in IEEE <i>Xplore</i>. Additionally, I will have an oppurtunity to present AlertNow at the U.S. Capitol following 1st place win in NJ-03 Congressional App Challenge.</>),
       tech: ["Python", "Raspberry Pi", "Machine Learning", "YOLOv8", "CNN", "PyTorch", "TensorFlow", "PyQt"],
       publication: "https://ieeexplore.ieee.org/document/11147316",
       source: "https://github.com/adicooks/AlertNow/tree/main",
@@ -77,7 +77,7 @@ const Portfolio = () => {
       year: "Feb 2025 - Present",
       category: "Gun Violence Prevention",
       subtitle: "Penn Injury Science Center",
-      description: "Philadelphia faces acute challenges with firearm violence, disproportionately affecting youth of color in vulnerable communities, both as victims and as perpetrators.Through my PISC internship with the Penn Community Violence Prevention Program, I visit West Philadelphia communities, including local high schools, with PISC social workers to identify and connect with individuals at highest risk. Under the guidance of my mentor, I also analyze shooting incidents to uncover demographic, spatial, and temporal patterns, generating actionable insights for violence prevention strategies and timely public health interventions. I've submitted abstract of this work to the 'The Society for Advancement of Violence and Injury Research' (SAVIR) 2026 conference and preparing the manuscript for publication in a peer reviewed journal.",
+      description: "Philadelphia faces acute challenges with firearm violence, disproportionately affecting youth of color in vulnerable communities, both as victims and as perpetrators.Through my PISC internship with the Penn Community Violence Prevention Program, I visit West Philadelphia communities, including local high schools, with PISC social workers to identify and connect with individuals at highest risk. Under the guidance of my mentor, I also analyze shooting incidents to uncover demographic, spatial, and temporal patterns, generating actionable insights for violence prevention strategies and timely public health interventions. I've been invited to present this work at the 'The Society for Advancement of Violence and Injury Research' (SAVIR) 2026 conference in Providence, RI and submitted the manuscript for publication in a peer reviewed journal.",
       tech: ["Statistical Data Analysis", "Cummunity Engagement", "Teamwork"],
       publication: "ToDo",
       source: "ToDo",
@@ -90,7 +90,7 @@ const Portfolio = () => {
       year: "Aug 2024 - July 2025",
       category: "Neuroimaging Research",
       subtitle: "University of Pennsylvania Perelman School of Medicine",
-      description: "During my internship, I collaborated with researchers at the Center for Biomedical Image Computing and Analytics (CBICA), which develops advanced computational methods to transform biomedical images into diagnostic and predictive tools for personalized medicine. I focused on designing and developing an AI-powered mobile app for NiChart, a large and diverse collection of MRI images, to enable early detection of aging and neurodegenerative diseases through imaging biomarkers. The app is now in beta testing for clinical integration.",
+      description: "During my internship, I collaborated with researchers at the Center for Biomedical Image Computing and Analytics (CBICA), which develops advanced computational methods to transform biomedical images into diagnostic and predictive tools for personalized medicine. I focused on designing and developing an AI-powered mobile app for NiChart, a large and diverse collection of MRI images, to enable early detection of aging and neurodegenerative diseases through imaging biomarkers. The app is now in beta testing for clinical integration. I am invited to serve as student ambassador for NiChart to organize a neuroimaging outreach event for high school students.",
       tech: ["Swift", "Python", "AWS", "Xcode", "Problem Solving"],
       publication: "ToDo",
       source: "ToDo",
@@ -372,6 +372,16 @@ const Portfolio = () => {
                           className="px-4 py-2 rounded border border-[hsl(var(--border))] text-sm font-medium text-foreground hover:bg-[hsl(var(--accent))] transition-colors"
                         >
                           View Video
+                        </a>
+                      )}
+                      {project.title === 'AlertNow' && (
+                        <a
+                          href="https://www.congressionalappchallenge.us/25-nj03/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-4 py-2 rounded border border-[hsl(var(--border))] text-sm font-medium text-foreground hover:bg-[hsl(var(--accent))] transition-colors"
+                        >
+                          View Announcement
                         </a>
                       )}
                       {project.source && project.source !== 'ToDo' && (
@@ -685,6 +695,13 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* 1 */}
             <div className="grid gap-2 p-6 border border-border rounded-xl bg-card h-full">
+              <h3 className="text-lg font-bold font-sans">1st Place, Congressional App Challenge</h3>
+              <p className="text-xs text-muted-foreground">Awarded by Congressman Herb Conaway</p>
+              <p className="text-xs text-muted-foreground">2025</p>
+              <p className="text-muted-foreground text-base">1st Place in category among 35 high school students in NJ-03</p>
+              <p className="text-xs text-muted-foreground italic">Invited to present at the US Capitol in April 2026</p>
+            </div>
+            <div className="grid gap-2 p-6 border border-border rounded-xl bg-card h-full">
               <h3 className="text-lg font-bold font-sans">1st Place, Math & Computer Science</h3>
               <p className="text-xs text-muted-foreground">NJ Academy of Science STEM Competition</p>
               <p className="text-xs text-muted-foreground">2025</p>
@@ -714,6 +731,13 @@ const Portfolio = () => {
               <p className="text-xs text-muted-foreground">2025</p>
               <p className="text-muted-foreground text-base">2nd Place in Computer Science Category</p>
               <p className="text-xs text-muted-foreground italic">Regional science fair</p>
+            </div>
+            <div className="grid gap-2 p-6 border border-border rounded-xl bg-card h-full">
+              <h3 className="text-lg font-bold font-sans">South Jersey Soccer Sectional Championship</h3>
+              <p className="text-xs text-muted-foreground">Moorestown High School</p>
+              <p className="text-xs text-muted-foreground">2025</p>
+              <p className="text-muted-foreground text-base">Managed varsity boys' soccer team</p>
+              <p className="text-xs text-muted-foreground italic">Regional soccer championship</p>
             </div>
             {/* 5 */}
             <div className="grid gap-2 p-6 border border-border rounded-xl bg-card h-full">
